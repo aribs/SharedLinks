@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Url:</strong>
+  <%= @link.url %>
+</p>
+
+<p>
+  <strong>Str type:</strong>
+  <%= @link.str_type %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @link.country %>
+</p>
+
+<p>
+  <strong>Quality:</strong>
+  <%= @link.quality %>
+</p>
+
+<p>
+  <strong>Reports:</strong>
+  <%= @link.reports %>
+</p>
+
+<%= link_to 'Edit', edit_link_path(@link) %> |
+<%= link_to 'Back', links_path %>
