@@ -1,3 +1,5 @@
+<% quality_array = QualityList.all.map {|quality| [quality.quality]} %>
+<% language_array = Language.all.map {|language| [language.language]} %>
 <%= form_for(@link) do |f| %>
   <% if @link.errors.any? %>
     <div id="error_explanation">
@@ -21,15 +23,15 @@
   </div>
   <div class="field">
     <%= f.label :country %><br>
-    <%= f.text_field :country %>
+    <%= f.select :country, options_for_select(language_array) %>
   </div>
   <div class="field">
     <%= f.label :quality %><br>
-    <%= f.text_field :quality %>
+    <%= f.select :quality, options_for_select(quality_array)%>
   </div>
-  <div class="field">
+  <div class="field" id="hiddenReports">
     <%= f.label :reports %><br>
-    <%= f.number_field :reports %>
+    <%= f.number_field :reports, :value => '0' %>
   </div>
   <div class="actions">
     <%= f.submit %>

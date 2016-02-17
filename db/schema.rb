@@ -11,7 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160215184400) do
+ActiveRecord::Schema.define(version: 20160217125442) do
+
+  create_table "languages", force: :cascade do |t|
+    t.string   "language"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "link_types", force: :cascade do |t|
+    t.string   "type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "links", force: :cascade do |t|
     t.string   "url"
@@ -19,6 +31,12 @@ ActiveRecord::Schema.define(version: 20160215184400) do
     t.string   "country"
     t.string   "quality"
     t.integer  "reports"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "quality_lists", force: :cascade do |t|
+    t.string   "quality"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
