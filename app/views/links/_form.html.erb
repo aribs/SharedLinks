@@ -1,5 +1,6 @@
 <% quality_array = QualityList.all.map {|quality| [quality.quality]} %>
 <% language_array = Language.all.map {|language| [language.language]} %>
+<% type_link_array = TypeLink.all.map{|link| link.type_link}%>
 <%= form_for(@link) do |f| %>
   <% if @link.errors.any? %>
     <div id="error_explanation">
@@ -15,11 +16,11 @@
 
   <div class="field">
     <%= f.label :url %><br>
-    <%= f.text_field :url %>
+    <%= f.text_field :url, :required => true %>
   </div>
   <div class="field">
     <%= f.label :str_type %><br>
-    <%= f.text_field :str_type %>
+    <%= f.select :str_type, options_for_select(type_link_array) %>
   </div>
   <div class="field">
     <%= f.label :country %><br>
