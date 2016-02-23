@@ -1,31 +1,32 @@
 - moto_links = Link.where('str_type = "Moto"')
 - f1_links = Link.where('str_type = "F1"')
-h1
-  = 'hello'
 
-= render 'form'
-
-h2
-  = 'Moto Links'
-ul.listLinks
-  - moto_links.each do |link|
-    li
-      span.info_label
-        a href= "#{link.url}"
-          = link.url
-      span.info_label
-        = link.country
-      span.info_label
-        = link.quality
-h2
-  = 'F1 links'
-ul.listLinks
-  - f1_links.each do |link|
-    li
-      span.info_label
-        a href= "#{link.url}"
-          = link.url
-      span.info_label
-        = link.country
-      span.info_label
-        = link.quality
+div.container
+  = render 'links/form_new'
+div.container
+  div.row
+    div.col-md-4.col-md-offset-1
+      h2
+        = 'Moto Links'
+      ul.listLinks
+        - moto_links.each do |link|
+          li
+            span.info_label
+              a href= "#{link.url}"
+                = link.url
+            span.info_label
+              = link.country
+            span.info_label
+              = link.quality
+      h2
+        = 'F1 links'
+      ul.listLinks
+        - f1_links.each do |link|
+          li
+            span.info_label
+              a href= "#{link.url}"
+                = link.url
+            span.info_label
+              = link.country
+            span.info_label
+              = link.quality
