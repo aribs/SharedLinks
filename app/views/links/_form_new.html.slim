@@ -2,28 +2,20 @@
 - language_array = Language.all.map {|language| [language.language]}
 - type_link_array = TypeLink.all.map{|link| link.type_link}
 div.row
-  div.col-md-4.col-md-offset-2
+  div.col-md-4.col-md-offset-1
     h1
-      = 'Shared Links'
-    /= render 'form'
-    div.submitForm
-      form-inline
-        = form_for @link, {:class=> 'form_inline'} do |f|
-          .field
-            = f.label :url
-          br
-            = f.text_field :url
-          .field
-            = f.label :str_type
-            = f.select :str_type, options_for_select(type_link_array)
-          .field
-            = f.label :country
-            = f.select :country, options_for_select(language_array)
-          .field
-            = f.label :quality
-            = f.select :quality, options_for_select(quality_array)
-          #hiddenReports.field
-            = f.label :reports
-            = f.number_field :reports, :value => '0'
-          .actions
-            = f.submit
+      = 'Racing Links'
+    = form_for @link do |f|
+
+      = f.label :url
+      = f.text_field :url
+      = f.label :str_type
+      = f.select :str_type, options_for_select(type_link_array)
+      = f.label :country
+      = f.select :country, options_for_select(language_array)
+      = f.label :quality
+      = f.select :quality, options_for_select(quality_array)
+      = f.submit
+      div#hiddenReports
+        = f.label :reports
+        = f.number_field :reports, :value => '0'

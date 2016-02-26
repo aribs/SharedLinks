@@ -2,6 +2,7 @@
  * Created by alejoribes on 17/2/16.
  */
 $(document).ready(function(){
+   //formInLine();
     $('#link_url').focusout(function(){
         var url = $('#link_url').val();
         if(validateURL(url)){
@@ -22,4 +23,7 @@ $(document).ready(function(){
         }
 
     };
+    //function formInLine(){
+      //  $('#new_link').addClass("form-inline");
+    //};
 });

@@ -3,30 +3,51 @@
 
 div.container
   = render 'links/form_new'
+div.separator
+  div.separatorBlueDark
+  div.separatorBlue
+  div.separatorBlueDark
+  div.separatorRed
+  div.separatorBlueDark
+  div.separatorBlue
+  div.separatorBlueDark
 div.container
   div.row
     div.col-md-4.col-md-offset-1
-      h2
+      h2.linksTitle
         = 'Moto Links'
-      ul.listLinks
+      table.listLinks.table-striped
+        th
+          = 'Link'
+        th
+          = 'Idioma'
+        th
+          = 'Calidad'
         - moto_links.each do |link|
-          li
-            span.info_label
-              a href= "#{link.url}"
-                = link.url
-            span.info_label
+          tr
+            td.info_label
+              a target='_blank' href= "#{link.url}"
+                = 'Ver Link'
+            td.info_label
               = link.country
-            span.info_label
+            td.info_label
               = link.quality
-      h2
+    div.col-md-4.col-md-offset-2
+      h2.linksTitle
         = 'F1 links'
-      ul.listLinks
+      table.listLinks.table-striped
+        th
+          = 'Link'
+        th
+          = 'Idioma'
+        th
+          = 'Calidad'
         - f1_links.each do |link|
-          li
-            span.info_label
-              a href= "#{link.url}"
-                = link.url
-            span.info_label
+          tr
+            td.info_label
+              a target='_blank' href= "#{link.url}"
+                = 'Ver Link'
+            td.info_label
               = link.country
-            span.info_label
+            td.info_label
               = link.quality

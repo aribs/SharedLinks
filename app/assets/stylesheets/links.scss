@@ -1,14 +1,52 @@
 // Place all the styles related to the Links controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+body{
+  background-color: #FFFFFF !important;
+  color: #032F5F !important;
+}
+ul li{
+  list-style: none;
+}
+li{
+  margin-left: -50px !important;
+}
+td{
+  padding: 15px;
+}
+.linksTitle{
+  margin-top: 30px;
+}
 .info_label{
   margin-left: 10px;
 }
 #hiddenReports{
-  visibility: hidden;
+  display:none;
 }
 .submitForm.field{
   display:inline-block;
 }
+.separatorRed{
+  width: 100%;
+  height: 10px;
+  background-color: #EE1B2C;
+}
+.separator{
+  margin-top: 30px;
+}
+.separatorBlue{
+  width: 100%;
+  height: 7px;
+  background-color: #6FC4EB;
+}
+.separatorBlueDark{
+  width: 100%;
+  height: 7px;
+  background-color: #002E60;
+}
+.submitForm{
+  background-color: #730E15;
+}
+
 
 
