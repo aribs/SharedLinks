@@ -5,17 +5,20 @@ div.row
   div.col-md-4.col-md-offset-1
     h1
       = 'Racing Links'
-    = form_for @link do |f|
+    button#buttonLinks
+      = 'Nuevo Link'
+    div.form_inline
+      = form_for @link do |f|
 
-      = f.label :url
-      = f.text_field :url
-      = f.label :str_type
-      = f.select :str_type, options_for_select(type_link_array)
-      = f.label :country
-      = f.select :country, options_for_select(language_array)
-      = f.label :quality
-      = f.select :quality, options_for_select(quality_array)
-      = f.submit
-      div#hiddenReports
-        = f.label :reports
-        = f.number_field :reports, :value => '0'
+        = f.label :url
+        = f.text_field :url
+        = f.label 'Tipo'
+        = f.select :str_type, options_for_select(type_link_array)
+        = f.label 'Idioma'
+        = f.select :country, options_for_select(language_array)
+        = f.label 'Calidad'
+        = f.select :quality, options_for_select(quality_array)
+        div#hiddenReports
+          = f.label :reports
+          = f.number_field :reports, :value => '0'
+        = f.submit 'Enviar Link'

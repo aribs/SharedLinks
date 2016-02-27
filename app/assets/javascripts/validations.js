@@ -23,7 +23,7 @@ $(document).ready(function(){
         }
 
     };
-    //function formInLine(){
-      //  $('#new_link').addClass("form-inline");
-    //};
+    $('#buttonLinks').on('click',function(){
+        $('.form_inline').toggle()
+    });
 });

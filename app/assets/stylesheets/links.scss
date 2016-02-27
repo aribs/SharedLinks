@@ -5,6 +5,10 @@ body{
   background-color: #FFFFFF !important;
   color: #032F5F !important;
 }
+
+form {
+  display: inline-block !important;
+}
 ul li{
   list-style: none;
 }
@@ -14,6 +18,9 @@ li{
 td{
   padding: 15px;
 }
+label{
+  margin: 5px;
+}
 .linksTitle{
   margin-top: 30px;
 }
@@ -22,9 +29,6 @@ td{
 }
 #hiddenReports{
   display:none;
-}
-.submitForm.field{
-  display:inline-block;
 }
 .separatorRed{
   width: 100%;
@@ -47,6 +51,13 @@ td{
 .submitForm{
   background-color: #730E15;
 }
-
-
+.new_link input {
+  display: inline-block !important;
+}
+.form_inline{
+  display: none;
+}
+#buttonLinks{
+  margin-bottom: 15px;
+}
 
