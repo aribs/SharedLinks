@@ -2,11 +2,10 @@
 - language_array = Language.all.map {|language| [language.language]}
 - type_link_array = TypeLink.all.map{|link| link.type_link}
 div.row
-  div.col-md-4.col-md-offset-1
+  div.col-md-10.col-md-offset-1
     h1
       = 'Racing Links'
-    button#buttonLinks
-      = 'Nuevo Link'
+
     div.form_inline
       = form_for @link do |f|
 

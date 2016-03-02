@@ -23,7 +23,5 @@ $(document).ready(function(){
         }
 
     };
-    $('#buttonLinks').on('click',function(){
-        $('.form_inline').toggle()
-    });
+
 });
